@@ -70,6 +70,12 @@ const filterButtons = document.querySelectorAll('.filter-button');
 const yearEl = document.querySelector('#year');
 const menuToggle = document.querySelector('.menu-toggle');
 const menuList = document.querySelector('#primary-menu');
+const heroVisual = document.querySelector('.hero__visual');
+const scrollOrbs = document.querySelectorAll('.scroll-visual__orb');
+const prefersReducedMotion =
+  typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : null;
 
 const badgeClassMap = {
   math: 'schedule__badge schedule__badge--math',
@@ -137,3 +143,62 @@ if (menuToggle && menuList) {
 }
 
 renderSchedule('all');
+
+if (scrollOrbs.length && !(prefersReducedMotion && prefersReducedMotion.matches)) {
+  let latestKnownScrollY = window.scrollY || window.pageYOffset || 0;
+  let ticking = false;
+  const heroSection = document.querySelector('.hero');
+
+  const updateScrollVisuals = () => {
+    const scrollY = latestKnownScrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
+    const heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
+    const heroProgress = Math.min(scrollY / heroHeight, 1);
+
+    scrollOrbs.forEach((orb, index) => {
+      const wave = Math.sin(progress * Math.PI * (index + 1));
+      const offsetX = wave * (80 + index * 28);
+      const offsetY = scrollY * (0.05 + index * 0.02);
+      const scale = 1 + heroProgress * (0.18 + index * 0.07);
+      const blur = 45 + progress * (25 + index * 10);
+
+      orb.style.setProperty('--offset-x', `${offsetX.toFixed(2)}px`);
+      orb.style.setProperty('--offset-y', `${offsetY.toFixed(2)}px`);
+      orb.style.setProperty('--scale', scale.toFixed(3));
+      orb.style.setProperty('--glow', `${blur.toFixed(2)}px`);
+    });
+
+    if (heroVisual) {
+      const heroOffset = Math.min(scrollY * -0.06, 0);
+      heroVisual.style.transform = `translateY(${heroOffset}px)`;
+    }
+
+    ticking = false;
+  };
+
+  const requestTick = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateScrollVisuals);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      latestKnownScrollY = window.scrollY || window.pageYOffset || 0;
+      requestTick();
+    },
+    { passive: true }
+  );
+
+  window.addEventListener('resize', () => {
+    latestKnownScrollY = window.scrollY || window.pageYOffset || 0;
+    requestTick();
+  });
+
+  updateScrollVisuals();
+} else if (heroVisual) {
+  heroVisual.style.transform = '';
+}

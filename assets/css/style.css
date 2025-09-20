@@ -27,6 +27,14 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -186,6 +194,51 @@ img {
   width: min(100%, 420px);
   justify-self: center;
   min-height: 320px;
+  will-change: transform;
+}
+
+.scroll-visual {
+  position: fixed;
+  inset: -40vh 0 0 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  filter: saturate(120%);
+}
+
+.scroll-visual__orb {
+  --size: clamp(220px, 32vw, 520px);
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  transform: translate3d(var(--offset-x, 0), var(--offset-y, 0), 0) scale(var(--scale, 1));
+  filter: blur(var(--glow, 55px));
+  will-change: transform, filter;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-visual__orb--primary {
+  --size: clamp(320px, 38vw, 560px);
+  top: 12vh;
+  left: -14vw;
+  background: radial-gradient(circle at 30% 30%, rgba(109, 139, 255, 0.55), rgba(109, 139, 255, 0.05));
+}
+
+.scroll-visual__orb--secondary {
+  --size: clamp(240px, 30vw, 480px);
+  top: 44vh;
+  right: -10vw;
+  background: radial-gradient(circle at 60% 40%, rgba(111, 255, 233, 0.5), rgba(111, 255, 233, 0.05));
+}
+
+.scroll-visual__orb--accent {
+  --size: clamp(280px, 34vw, 520px);
+  bottom: -12vh;
+  left: 32vw;
+  background: radial-gradient(circle at 40% 60%, rgba(255, 143, 183, 0.55), rgba(255, 143, 183, 0.05));
 }
 
 .hero__bubble {
@@ -696,5 +749,9 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .scroll-visual {
+    display: none;
   }
 }
