@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stati | Matematika, statisztika és Python csoportok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#top" class="logo">Stati</a>
+      <nav class="site-nav" aria-label="Fő navigáció">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Menü megnyitása</span>
+        </button>
+        <ul id="primary-menu">
+          <li><a href="#rolunk">Rólunk</a></li>
+          <li><a href="#csoportok">Csoportok</a></li>
+          <li><a href="#orarend">Órarend</a></li>
+          <li><a href="#foglalas">Foglalás</a></li>
+          <li><a href="#gyik">GYIK</a></li>
+        </ul>
+      </nav>
+      <a class="cta-button" href="#foglalas">Jelentkezem</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Statsztika + Attila = Stati</p>
+          <h1>Fiatalos tanulóközösség matematika, statisztika és Python témákban.</h1>
+          <p>Személyes és online foglalkozások modern módszerekkel, hogy magabiztosan mozogj a számok világában.</p>
+          <div class="hero__actions">
+            <a class="cta-button" href="#csoportok">Fedezd fel a csoportokat</a>
+            <a class="ghost-button" href="#orarend">Nézd meg az órarendet</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__bubble hero__bubble--primary"></div>
+          <div class="hero__bubble hero__bubble--secondary"></div>
+          <div class="hero__bubble hero__bubble--accent"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="rolunk">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Miért Stati?</p>
+          <h2>Dinamika, közösség, fejlődés.</h2>
+          <p>Az órákat <strong>Ati</strong>, fiatal, lelkes tanár tartja, aki hisz a projektekben, az interaktív tanulásban és a közösségi motivációban.</p>
+        </header>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <h3>Tematikus modulok</h3>
+            <p>Matematika, statisztika és Python tanfolyamok külön szinteken, egymásra épülő blokkokban.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Élő óra + anyagok</h3>
+            <p>Zoom órák felvétellel, interaktív Miro táblák és saját, letisztult jegyzetek minden alkalomra.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Mini közösség</h3>
+            <p>Kis létszámú csoportok, közös Discord szerver, versenyek és projekt kihívások.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracks" id="csoportok">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Tanulási útvonalak</p>
+          <h2>Találd meg a hozzád illő csoportot</h2>
+          <p>Választható modulok és időpontok, hogy beilleszkedjen az életedbe.</p>
+        </header>
+        <div class="track-grid">
+          <article class="track-card">
+            <h3>Matematika Boost</h3>
+            <p class="track-card__subtitle">9-12. évfolyam | érettségi felkészítő</p>
+            <ul>
+              <li>Heti 2 × 90 perc</li>
+              <li>Vizsgastratégiák és feladattípusok</li>
+              <li>Interaktív feladatmegoldó estek</li>
+            </ul>
+          </article>
+          <article class="track-card">
+            <h3>Statisztika Lab</h3>
+            <p class="track-card__subtitle">Egyetem / Data Science alapok</p>
+            <ul>
+              <li>Heti 1 × 120 perc</li>
+              <li>Valós adatkészletek és esettanulmányok</li>
+              <li>R projekt- és Python példák</li>
+            </ul>
+          </article>
+          <article class="track-card">
+            <h3>Python Start</h3>
+            <p class="track-card__subtitle">Programozási alapok teljesen kezdőknek</p>
+            <ul>
+              <li>Heti 1 × 120 perc</li>
+              <li>Játékos feladatok, automatizálás, adatvizualizáció</li>
+              <li>Mini projektek GitHub feltöltéssel</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule" id="orarend">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Órarend</p>
+          <h2>Dinamikus hét, átlátható időpontok</h2>
+          <p>Válassz tantárgyat, hogy lásd a releváns időpontokat. Minden csoportnál maximum 8 főt fogadunk.</p>
+          <div class="schedule__filters" role="radiogroup" aria-label="Szűrés tantárgy szerint">
+            <button class="filter-button is-active" data-track="all" role="radio" aria-checked="true">Összes</button>
+            <button class="filter-button" data-track="math" role="radio" aria-checked="false">Matematika</button>
+            <button class="filter-button" data-track="stats" role="radio" aria-checked="false">Statisztika</button>
+            <button class="filter-button" data-track="python" role="radio" aria-checked="false">Python</button>
+          </div>
+        </header>
+        <div class="schedule__table-wrapper">
+          <table class="schedule__table">
+            <thead>
+              <tr>
+                <th>Nap</th>
+                <th>Időpont</th>
+                <th>Csoport</th>
+                <th>Szint</th>
+                <th>Formátum</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-body">
+              <!-- JS tölti fel -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="foglalas">
+      <div class="container booking__inner">
+        <div class="booking__content">
+          <header class="section-header">
+            <p class="eyebrow">Foglalás</p>
+            <h2>Foglalj próbaórát vagy kérdezz bármelyik csoportról</h2>
+            <p>Töltsd ki az űrlapot, és 24 órán belül visszajelzést kapsz a szabad helyekről, próbaóráról vagy csomag ajánlatról.</p>
+          </header>
+          <ul class="booking__perks">
+            <li>✔ Ingyenes 30 perces ismerkedő beszélgetés</li>
+            <li>✔ Rugalmas online és személyes alkalmak</li>
+            <li>✔ Kedvezmény páros jelentkezés esetén</li>
+          </ul>
+        </div>
+        <form class="booking__form" aria-label="Foglalási űrlap">
+          <label for="name">Név</label>
+          <input type="text" id="name" name="name" placeholder="Teljes neved" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="email@pelda.hu" required>
+
+          <label for="track">Érdeklődés</label>
+          <select id="track" name="track" required>
+            <option value="">Válassz egy csoportot</option>
+            <option value="math">Matematika Boost</option>
+            <option value="stats">Statisztika Lab</option>
+            <option value="python">Python Start</option>
+            <option value="custom">Nem tudom, segítsetek választani</option>
+          </select>
+
+          <label for="message">Üzenet</label>
+          <textarea id="message" name="message" rows="4" placeholder="Mesélj a céljaidról, határidőkről, tapasztalatodról..."></textarea>
+
+          <button type="submit" class="cta-button">Küldés</button>
+          <p class="form-note">Az űrlap elküldése nem jelent végleges foglalást. Felvesszük veled a kapcsolatot a részletekért.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="teacher" id="teacher">
+      <div class="container teacher__inner">
+        <div class="teacher__photo" aria-hidden="true">
+          <div class="photo-placeholder">
+            <span>Ati</span>
+          </div>
+        </div>
+        <div class="teacher__content">
+          <header class="section-header">
+            <p class="eyebrow">Ismerj meg</p>
+            <h2>"Hinni akarok benned, hogy te is higgy magadban."</h2>
+          </header>
+          <p>Sziasztok, Attila vagyok, de mindenki csak <strong>Ati</strong>-nak hív. Matematikus és adat tudós háttérrel, 6 év tanítási tapasztalattal. Szeretem a sztorikat, a vizuális jegyzeteket és azt, amikor valaki rájön: a matek, statisztika vagy a kódolás nem is olyan félelmetes.</p>
+          <p>Korábban dolgoztam fintech startupnál, adatelemzőként e-kereskedelemben és mentoráltam junior data science csapatokat. A <em>Stati</em>-t azért hoztam létre, mert a személyre szabott figyelem és a közösségi lendület együtt működik a legjobban.</p>
+          <ul class="teacher__tags">
+            <li>#interaktív</li>
+            <li>#adatvezérelt</li>
+            <li>#humoros</li>
+            <li>#flowállapot</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Visszajelzések</p>
+          <h2>Ezeket mondták a Stati diákjai</h2>
+        </header>
+        <div class="testimonial-grid">
+          <figure class="testimonial-card">
+            <blockquote>
+              "Ati úgy magyarázza a statisztikát, hogy még a legszárazabb téma is játék lesz. Az órák után rögtön megértem, mit kér az egyetemi vizsga."
+            </blockquote>
+            <figcaption>— Lilla, BGE hallgató</figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>
+              "A Python Start projekteknek hála felvettek egy gyakornoki helyre. A közösség inspiráló, mindig van kivel gyakorolni."
+            </blockquote>
+            <figcaption>— Andris, elsőéves informatikus</figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>
+              "Az érettségi felkészítőn heti rutin lett a közös problémamegoldás. Ati türelmes, és megmutatja, hogyan gondolkodj a feladatokról."
+            </blockquote>
+            <figcaption>— Sára, 12. évfolyam</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="gyik">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">GYIK</p>
+          <h2>Gyakori kérdések és válaszok</h2>
+        </header>
+        <div class="faq-list">
+          <details>
+            <summary>Mennyi ideig tart egy modul?</summary>
+            <p>Egy modul általában 6 hét, de vannak intenzív, 3 hetes sprintjeink is. Az órarendben mindig jelöljük, melyik modul melyik héten fut.</p>
+          </details>
+          <details>
+            <summary>Lehet csatlakozni a tanfolyamhoz év közben?</summary>
+            <p>Igen! Ha van szabad hely, a modul elején és közepén is be tudsz kapcsolódni. A felzárkózáshoz megkapod az eddigi anyagokat és feladatokat.</p>
+          </details>
+          <details>
+            <summary>Mi történik, ha kihagyok egy alkalmat?</summary>
+            <p>Minden órát rögzítünk, így vissza tudod nézni. Ha élő konzultációt szeretnél, az egyéni mentoridőben pótlási lehetőség jár.</p>
+          </details>
+          <details>
+            <summary>Mennyibe kerülnek az órák?</summary>
+            <p>Az árak a csoport méretétől és a modul hosszától függenek. A próbaóra után személyre szabott ajánlatot küldünk. Átlagosan 6 500–9 500 Ft / 90 perc.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#top" class="logo">Stati</a>
+        <p>Fiatalos tanulóközösség matematika, statisztika és Python világában.</p>
+      </div>
+      <div class="footer__contact">
+        <p><strong>Kapcsolat:</strong></p>
+        <p><a href="mailto:hello@stati.hu">hello@stati.hu</a></p>
+        <p><a href="tel:+36301234567">+36 30 123 4567</a></p>
+      </div>
+      <div class="footer__social">
+        <p><strong>Kövess:</strong></p>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__note">© <span id="year"></span> Stati. Minden jog fenntartva.</p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
