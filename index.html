@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <meta name="theme-color" content="#0f0f17" />
 </head>
 <body>
   <div class="scroll-visual" aria-hidden="true">
@@ -17,7 +19,10 @@
   </div>
   <header class="site-header">
     <div class="container nav-container">
-      <a href="#top" class="logo">Stati</a>
+      <a href="#top" class="logo" aria-label="Stati">
+        <img src="assets/img/stati-logo-mark.svg" alt="Stati logó" class="logo__mark" />
+        <span class="logo__text">Stati</span>
+      </a>
       <nav class="site-nav" aria-label="Fő navigáció">
         <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
           <span class="menu-toggle__line"></span>
@@ -48,11 +53,41 @@
             <a class="cta-button" href="#csoportok">Fedezd fel a csoportokat</a>
             <a class="ghost-button" href="#orarend">Nézd meg az órarendet</a>
           </div>
+          <ul class="hero__metrics" aria-label="Stati számok">
+            <li class="hero__metric">
+              <span class="hero__metric-icon">
+                <img src="assets/img/icon-community.svg" alt="" aria-hidden="true" />
+              </span>
+              <div>
+                <span class="hero__metric-value">120+</span>
+                <span class="hero__metric-label">aktív diákkal évente</span>
+              </div>
+            </li>
+            <li class="hero__metric">
+              <span class="hero__metric-icon">
+                <img src="assets/img/icon-stats.svg" alt="" aria-hidden="true" />
+              </span>
+              <div>
+                <span class="hero__metric-value">95%</span>
+                <span class="hero__metric-label">vizsga sikerességi arány</span>
+              </div>
+            </li>
+            <li class="hero__metric">
+              <span class="hero__metric-icon">
+                <img src="assets/img/icon-modules.svg" alt="" aria-hidden="true" />
+              </span>
+              <div>
+                <span class="hero__metric-value">8 fő</span>
+                <span class="hero__metric-label">max. csoportlétszám</span>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="hero__visual" aria-hidden="true">
           <div class="hero__bubble hero__bubble--primary"></div>
           <div class="hero__bubble hero__bubble--secondary"></div>
           <div class="hero__bubble hero__bubble--accent"></div>
+          <img src="assets/img/hero-visual.svg" alt="" class="hero__illustration" />
         </div>
       </div>
     </section>
@@ -66,14 +101,23 @@
         </header>
         <div class="benefit-grid">
           <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">
+              <img src="assets/img/icon-modules.svg" alt="" />
+            </span>
             <h3>Tematikus modulok</h3>
             <p>Matematika, statisztika és Python tanfolyamok külön szinteken, egymásra épülő blokkokban.</p>
           </article>
           <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">
+              <img src="assets/img/icon-live.svg" alt="" />
+            </span>
             <h3>Élő óra + anyagok</h3>
             <p>Zoom órák felvétellel, interaktív Miro táblák és saját, letisztult jegyzetek minden alkalomra.</p>
           </article>
           <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">
+              <img src="assets/img/icon-community.svg" alt="" />
+            </span>
             <h3>Mini közösség</h3>
             <p>Kis létszámú csoportok, közös Discord szerver, versenyek és projekt kihívások.</p>
           </article>
@@ -90,6 +134,9 @@
         </header>
         <div class="track-grid">
           <article class="track-card">
+            <span class="track-card__icon" aria-hidden="true">
+              <img src="assets/img/icon-math.svg" alt="" />
+            </span>
             <h3>Matematika Boost</h3>
             <p class="track-card__subtitle">9-12. évfolyam | érettségi felkészítő</p>
             <ul>
@@ -99,6 +146,9 @@
             </ul>
           </article>
           <article class="track-card">
+            <span class="track-card__icon" aria-hidden="true">
+              <img src="assets/img/icon-stats.svg" alt="" />
+            </span>
             <h3>Statisztika Lab</h3>
             <p class="track-card__subtitle">Egyetem / Data Science alapok</p>
             <ul>
@@ -108,6 +158,9 @@
             </ul>
           </article>
           <article class="track-card">
+            <span class="track-card__icon" aria-hidden="true">
+              <img src="assets/img/icon-python.svg" alt="" />
+            </span>
             <h3>Python Start</h3>
             <p class="track-card__subtitle">Programozási alapok teljesen kezdőknek</p>
             <ul>
@@ -275,7 +328,10 @@
   <footer class="site-footer">
     <div class="container footer__inner">
       <div>
-        <a href="#top" class="logo">Stati</a>
+        <a href="#top" class="logo" aria-label="Stati">
+          <img src="assets/img/stati-logo-mark.svg" alt="Stati logó" class="logo__mark" />
+          <span class="logo__text">Stati</span>
+        </a>
         <p>Fiatalos tanulóközösség matematika, statisztika és Python világában.</p>
       </div>
       <div class="footer__contact">
