@@ -1,12 +1,16 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Modul ikon</title>
   <defs>
-    <linearGradient id="modulesGradient" x1="12" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+    <linearGradient id="moduleGradient" x1="16" y1="52" x2="48" y2="12" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#6D8BFF" />
       <stop offset="1" stop-color="#6FFFE9" />
     </linearGradient>
   </defs>
-  <rect x="10" y="10" width="44" height="44" rx="14" fill="rgba(109, 139, 255, 0.12)" stroke="rgba(109, 139, 255, 0.5)" stroke-width="1.5" />
-  <path d="M22 24H32M22 32H42M22 40H34" stroke="url(#modulesGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <circle cx="40" cy="24" r="4" fill="#FF8FB7" />
-  <circle cx="38" cy="40" r="3.5" fill="#6FFFE9" />
+  <rect x="12.5" y="12.5" width="39" height="39" rx="12" fill="#101425" stroke="#1E223C" stroke-width="1.5" />
+  <rect x="18" y="18" width="12" height="12" rx="4" stroke="url(#moduleGradient)" stroke-width="3" fill="none" />
+  <rect x="34" y="18" width="12" height="12" rx="4" stroke="#64F7D9" stroke-width="2.6" fill="none" />
+  <rect x="18" y="34" width="12" height="12" rx="4" stroke="#8A97FF" stroke-width="2.6" fill="none" />
+  <rect x="34" y="34" width="12" height="12" rx="4" fill="url(#moduleGradient)" opacity="0.18" />
+  <path d="M28 24H34" stroke="#64F7D9" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M28 40H34" stroke="#64F7D9" stroke-width="2.4" stroke-linecap="round" />
 </svg>

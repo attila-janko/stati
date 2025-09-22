@@ -1,9 +1,18 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="44" height="44" rx="14" fill="rgba(111, 255, 233, 0.1)" stroke="rgba(111, 255, 233, 0.45)" stroke-width="1.5" />
-  <path d="M22 36L30 28L38 32L44 24" stroke="#6FFFE9" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
-  <circle cx="30" cy="28" r="4" fill="#6D8BFF" />
-  <circle cx="38" cy="32" r="4" fill="#FF8FB7" />
-  <circle cx="22" cy="36" r="4" fill="#6FFFE9" />
-  <circle cx="44" cy="24" r="4" fill="#6D8BFF" />
-  <path d="M22 42H44" stroke="#6D8BFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8" opacity="0.6" />
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Statisztika ikon</title>
+  <defs>
+    <linearGradient id="statsGradient" x1="18" y1="50" x2="46" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D8BFF" />
+      <stop offset="1" stop-color="#6FFFE9" />
+    </linearGradient>
+  </defs>
+  <rect x="12.5" y="12.5" width="39" height="39" rx="12" fill="#101425" stroke="#1E223C" stroke-width="1.5" />
+  <path d="M20 43V22" stroke="#1E223C" stroke-width="1.6" stroke-linecap="round" />
+  <path d="M44 43H20" stroke="#1E223C" stroke-width="1.6" stroke-linecap="round" />
+  <path d="M22 36L28 29L34 34L42 24" stroke="url(#statsGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <circle cx="28" cy="29" r="2.2" fill="#6FFFE9" />
+  <circle cx="34" cy="34" r="2.2" fill="#8A97FF" />
+  <circle cx="22" cy="36" r="1.8" fill="#6D8BFF" />
+  <circle cx="42" cy="24" r="1.8" fill="#6FFFE9" />
+  <path d="M24 27C26.8 23.2 30.9 21 36 21C39.5 21 42.6 22 45 23.8" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" stroke-linecap="round" />
 </svg>

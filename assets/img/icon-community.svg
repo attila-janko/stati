@@ -1,14 +1,15 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Közösség ikon</title>
   <defs>
-    <linearGradient id="communityGradient" x1="12" y1="16" x2="52" y2="52" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FF8FB7" />
-      <stop offset="1" stop-color="#6D8BFF" />
+    <linearGradient id="communityGradient" x1="14" y1="52" x2="52" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D8BFF" />
+      <stop offset="1" stop-color="#6FFFE9" />
     </linearGradient>
   </defs>
-  <rect x="9" y="14" width="46" height="36" rx="16" fill="rgba(255, 143, 183, 0.12)" stroke="rgba(255, 143, 183, 0.55)" stroke-width="1.5" />
-  <path d="M24 33C20.1 33 17 29.9 17 26C17 22.1 20.1 19 24 19C27.9 19 31 22.1 31 26C31 29.9 27.9 33 24 33Z" stroke="url(#communityGradient)" stroke-width="3.4" />
-  <path d="M40 33C36.1 33 33 29.9 33 26C33 22.1 36.1 19 40 19C43.9 19 47 22.1 47 26C47 29.9 43.9 33 40 33Z" stroke="url(#communityGradient)" stroke-width="3.4" />
-  <path d="M20 35C25 39 39 39 44 35" stroke="#6FFFE9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M20 42L16 46" stroke="#6D8BFF" stroke-width="3.4" stroke-linecap="round" />
-  <path d="M44 42L48 46" stroke="#FF8FB7" stroke-width="3.4" stroke-linecap="round" />
+  <rect x="9" y="12" width="46" height="40" rx="20" fill="#111425" stroke="#1E223C" stroke-width="1.5" />
+  <circle cx="32" cy="26" r="9.2" stroke="url(#communityGradient)" stroke-width="3" fill="none" />
+  <path d="M15.5 44.5C18.8 37.6 24.8 33.5 32 33.5C39.2 33.5 45.2 37.6 48.5 44.5" stroke="url(#communityGradient)" stroke-width="3" stroke-linecap="round" fill="none" />
+  <circle cx="20.5" cy="30.5" r="5.6" stroke="#8A97FF" stroke-width="2.4" fill="none" />
+  <circle cx="43.5" cy="30.5" r="5.6" stroke="#64F7D9" stroke-width="2.4" fill="none" />
+  <path d="M18.4 40.2C21.1 36 25.9 33.6 32 33.6C38.1 33.6 42.9 36 45.6 40.2" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" stroke-linecap="round" fill="none" />
 </svg>

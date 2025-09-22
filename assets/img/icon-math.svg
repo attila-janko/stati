@@ -1,8 +1,16 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="44" height="44" rx="14" fill="rgba(109, 139, 255, 0.1)" stroke="rgba(109, 139, 255, 0.45)" stroke-width="1.5" />
-  <path d="M22 24H42" stroke="#6D8BFF" stroke-width="3.6" stroke-linecap="round" />
-  <path d="M26 18V30" stroke="#6D8BFF" stroke-width="3.6" stroke-linecap="round" />
-  <path d="M32 38H42" stroke="#6FFFE9" stroke-width="3.6" stroke-linecap="round" />
-  <path d="M22 32H42" stroke="#FF8FB7" stroke-width="3.6" stroke-linecap="round" />
-  <path d="M34 18L44 30" stroke="#FF8FB7" stroke-width="3.6" stroke-linecap="round" />
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Matematika ikon</title>
+  <defs>
+    <linearGradient id="mathGradient" x1="18" y1="50" x2="46" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D8BFF" />
+      <stop offset="1" stop-color="#6FFFE9" />
+    </linearGradient>
+  </defs>
+  <rect x="12.5" y="12.5" width="39" height="39" rx="12" fill="#101425" stroke="#1E223C" stroke-width="1.5" />
+  <path d="M20 44V20H44" stroke="url(#mathGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M20 36C25 30 29 24.5 36.5 23C41 22 44 24 44 27.5" stroke="#8A97FF" stroke-width="2.6" stroke-linecap="round" fill="none" />
+  <path d="M24 28C26 26 28.8 25 31.5 25" stroke="#64F7D9" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M30 39H36" stroke="#64F7D9" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M33 36V42" stroke="#64F7D9" stroke-width="2.4" stroke-linecap="round" />
+  <circle cx="26" cy="32" r="2" fill="#6FFFE9" />
 </svg>

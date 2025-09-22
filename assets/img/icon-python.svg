@@ -1,7 +1,15 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="44" height="44" rx="14" fill="rgba(255, 143, 183, 0.1)" stroke="rgba(255, 143, 183, 0.45)" stroke-width="1.5" />
-  <path d="M32 18C26 18 22 22.2 22 27.8V32H32V28H26" stroke="#FF8FB7" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M32 46C38 46 42 41.8 42 36.2V32H32V36H38" stroke="#6D8BFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
-  <circle cx="27" cy="23" r="2.6" fill="#6FFFE9" />
-  <circle cx="37" cy="41" r="2.6" fill="#6FFFE9" />
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Python ikon</title>
+  <defs>
+    <linearGradient id="pythonGradient" x1="18" y1="50" x2="46" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D8BFF" />
+      <stop offset="1" stop-color="#6FFFE9" />
+    </linearGradient>
+  </defs>
+  <rect x="12.5" y="12.5" width="39" height="39" rx="12" fill="#101425" stroke="#1E223C" stroke-width="1.5" />
+  <path d="M39 22H30C26.7 22 24 24.7 24 28V30" stroke="url(#pythonGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M25 36C25 33.2 27.2 31 30 31H38C41.3 31 44 33.7 44 37C44 40.3 41.3 43 38 43H29" stroke="#64F7D9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="27" cy="24.5" r="1.8" fill="#6FFFE9" />
+  <circle cx="41" cy="39.5" r="1.8" fill="#8A97FF" />
+  <path d="M21 24C24 19 28.8 16 34.5 16C40.2 16 45 19 48 24" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" stroke-linecap="round" />
 </svg>

@@ -12,7 +12,7 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
-  --shadow-soft: 0 30px 80px rgba(14, 18, 45, 0.25);
+  --shadow-soft: 0 22px 60px rgba(10, 14, 36, 0.28);
   --transition: all 0.25s ease;
 }
 
@@ -85,38 +85,32 @@ img {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.35rem 0.6rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  gap: 0.6rem;
+  padding: 0.15rem 0;
   font-family: 'Manrope', 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text);
-  transition: var(--transition);
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .logo:hover,
 .logo:focus {
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-secondary);
 }
 
 .logo__mark {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
-  filter: drop-shadow(0 10px 22px rgba(109, 139, 255, 0.35));
 }
 
 .logo__text {
-  background: linear-gradient(135deg, #f5f7ff 0%, #9da9ff 50%, #6fffe9 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 0.18em;
+  color: inherit;
+  letter-spacing: 0.16em;
 }
 
 .site-header {
@@ -219,11 +213,12 @@ img {
 
 .hero__visual {
   position: relative;
-  width: min(100%, 440px);
+  width: min(100%, 420px);
   justify-self: center;
-<<<<<<< ours
   min-height: 320px;
-  will-change: transform;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
 }
 
 .scroll-visual {
@@ -232,7 +227,7 @@ img {
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
-  filter: saturate(120%);
+  filter: saturate(115%);
 }
 
 .scroll-visual__orb {
@@ -241,10 +236,10 @@ img {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  opacity: 0.6;
+  opacity: 0.45;
   mix-blend-mode: screen;
   transform: translate3d(var(--offset-x, 0), var(--offset-y, 0), 0) scale(var(--scale, 1));
-  filter: blur(var(--glow, 55px));
+  filter: blur(var(--glow, 75px));
   will-change: transform, filter;
   transition: opacity 0.3s ease;
 }
@@ -253,41 +248,35 @@ img {
   --size: clamp(320px, 38vw, 560px);
   top: 12vh;
   left: -14vw;
-  background: radial-gradient(circle at 30% 30%, rgba(109, 139, 255, 0.55), rgba(109, 139, 255, 0.05));
+  background: radial-gradient(circle at 30% 30%, rgba(109, 139, 255, 0.45), rgba(109, 139, 255, 0.05));
 }
 
 .scroll-visual__orb--secondary {
   --size: clamp(240px, 30vw, 480px);
   top: 44vh;
   right: -10vw;
-  background: radial-gradient(circle at 60% 40%, rgba(111, 255, 233, 0.5), rgba(111, 255, 233, 0.05));
+  background: radial-gradient(circle at 60% 40%, rgba(111, 255, 233, 0.4), rgba(111, 255, 233, 0.05));
 }
 
 .scroll-visual__orb--accent {
   --size: clamp(280px, 34vw, 520px);
   bottom: -12vh;
   left: 32vw;
-  background: radial-gradient(circle at 40% 60%, rgba(255, 143, 183, 0.55), rgba(255, 143, 183, 0.05));
-=======
-  min-height: 340px;
-  display: grid;
-  place-items: center;
-  isolation: isolate;
->>>>>>> theirs
+  background: radial-gradient(circle at 40% 60%, rgba(255, 143, 183, 0.42), rgba(255, 143, 183, 0.05));
 }
 
 .hero__bubble {
   position: absolute;
   border-radius: 50%;
   filter: blur(0);
-  opacity: 0.75;
+  opacity: 0.5;
   z-index: 0;
 }
 
 .hero__bubble--primary {
   width: 280px;
   height: 280px;
-  background: radial-gradient(circle, rgba(109, 139, 255, 0.95), rgba(109, 139, 255, 0.05));
+  background: radial-gradient(circle, rgba(109, 139, 255, 0.6), rgba(109, 139, 255, 0.05));
   top: 10%;
   left: 0;
 }
@@ -295,7 +284,7 @@ img {
 .hero__bubble--secondary {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(111, 255, 233, 0.9), rgba(111, 255, 233, 0.05));
+  background: radial-gradient(circle, rgba(111, 255, 233, 0.55), rgba(111, 255, 233, 0.05));
   bottom: 0;
   right: 5%;
 }
@@ -303,16 +292,17 @@ img {
 .hero__bubble--accent {
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(255, 143, 183, 0.95), rgba(255, 143, 183, 0.05));
+  background: radial-gradient(circle, rgba(255, 143, 183, 0.58), rgba(255, 143, 183, 0.05));
   top: 35%;
   right: 35%;
 }
 
 .hero__illustration {
   width: 100%;
-  max-width: 420px;
-  border-radius: 32px;
-  box-shadow: 0 30px 80px rgba(14, 18, 45, 0.4);
+  max-width: 400px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 48px rgba(8, 12, 36, 0.32);
   z-index: 1;
 }
 
@@ -329,27 +319,28 @@ img {
   display: flex;
   gap: 1rem;
   align-items: center;
-  background: rgba(21, 21, 38, 0.65);
+  background: rgba(18, 20, 38, 0.75);
   border-radius: var(--radius-md);
   padding: 1rem 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 18px 48px rgba(12, 14, 30, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 16px 36px rgba(8, 12, 30, 0.28);
 }
 
 .hero__metric-icon {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(12, 16, 32, 0.82);
+  border: 1px solid rgba(111, 255, 233, 0.16);
   flex-shrink: 0;
 }
 
 .hero__metric-icon img {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
 }
 
 .hero__metric-value {
@@ -395,17 +386,17 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   margin-bottom: 1.5rem;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 20px 45px rgba(10, 12, 28, 0.35);
+  border-radius: 20px;
+  background: rgba(12, 16, 32, 0.82);
+  border: 1px solid rgba(111, 255, 233, 0.16);
 }
 
 .benefit-card__icon img {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
 }
 
 .benefit-card h3 {
@@ -440,7 +431,7 @@ img {
   position: absolute;
   inset: -20% -50% auto;
   height: 60%;
-  background: linear-gradient(135deg, rgba(109, 139, 255, 0.3), rgba(111, 255, 233, 0.08));
+  background: linear-gradient(135deg, rgba(109, 139, 255, 0.22), rgba(111, 255, 233, 0.08));
   transform: rotate(12deg);
   pointer-events: none;
   z-index: 0;
@@ -455,17 +446,17 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 68px;
-  height: 68px;
+  width: 64px;
+  height: 64px;
   margin-bottom: 1.5rem;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 22px 45px rgba(10, 10, 30, 0.35);
+  background: rgba(12, 16, 32, 0.82);
+  border: 1px solid rgba(111, 255, 233, 0.16);
 }
 
 .track-card__icon img {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
 }
 
 .track-card:hover {
