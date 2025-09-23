@@ -1,26 +1,14 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Stati monogram</title>
   <defs>
-    <linearGradient id="paint0_linear" x1="8" y1="10" x2="56" y2="54" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6D8BFF" />
-      <stop offset="0.5" stop-color="#6FFFE9" />
-      <stop offset="1" stop-color="#FF8FB7" />
+    <linearGradient id="ring" x1="12" y1="52" x2="52" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D8BFF" />
+      <stop offset="1" stop-color="#6FFFE9" />
     </linearGradient>
-    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientTransform="translate(46 14) rotate(120) scale(26)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.65" />
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
-    </radialGradient>
-    <filter id="shadow" x="4" y="5" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-      <feGaussianBlur stdDeviation="2.5" />
-      <feComposite in2="SourceAlpha" operator="in" />
-      <feColorMatrix type="matrix" values="0 0 0 0 0.09 0 0 0 0 0.11 0 0 0 0 0.25 0 0 0 0.35 0" />
-      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow" />
-      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-    </filter>
   </defs>
-  <g filter="url(#shadow)">
-    <rect x="8" y="8" width="48" height="48" rx="16" fill="url(#paint0_linear)" />
-  </g>
-  <circle cx="44" cy="20" r="10" fill="url(#paint1_radial)" />
-  <path d="M22.5 23C24.7 18 29.9 16 35 16C42 16 46 19.8 46 25.6C46 36.4 24 34.6 24 42.5C24 45.8 27.2 48 31.8 48C36.3 48 39.6 45.8 41.7 42.2" stroke="#0F0F17" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="32" cy="32" r="27" fill="#101425" />
+  <circle cx="32" cy="32" r="27" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" fill="none" />
+  <circle cx="32" cy="32" r="23.5" stroke="url(#ring)" stroke-width="3" fill="none" />
+  <path d="M38.5 22C38.5 17.4 34.3 14 29 14C23.6 14 19.5 17.6 19.5 22.3C19.5 27.6 23 30.1 31.1 32C38.5 33.7 41.5 36 41.5 40C41.5 44.5 37.2 48 31 48C26 48 22.2 45.7 21 42.3" stroke="#F5F7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <circle cx="40" cy="21" r="2.4" fill="#6FFFE9" />
 </svg>
