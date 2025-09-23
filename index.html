@@ -243,8 +243,15 @@
           <textarea id="message" name="message" rows="4" placeholder="Mesélj a céljaidról, határidőkről, tapasztalatodról..."></textarea>
 
           <button type="submit" class="cta-button">Küldés</button>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
           <p class="form-note">Az űrlap elküldése nem jelent végleges foglalást. Felvesszük veled a kapcsolatot a részletekért.</p>
         </form>
+        <section class="booking__saved" aria-live="polite" hidden>
+          <h3>Elmentett jelentkezések</h3>
+          <p class="booking__saved-note">A jelentkezéseket biztonságosan tároljuk, az alábbi lista a legutóbbi beküldéseket mutatja.</p>
+          <p class="booking__saved-empty">Még nem érkezett jelentkezés.</p>
+          <ul class="booking__saved-list"></ul>
+        </section>
       </div>
     </section>
 
