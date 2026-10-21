@@ -109,25 +109,38 @@ const BOOKING_STORAGE_KEY = 'statiBookingEntries';
 const BOOKING_API_ENDPOINT = '/api/bookings';
 
 function renderSchedule(filter = 'all') {
-  scheduleBody.innerHTML = '';
+  scheduleBody.textContent = '';
 
   const filtered =
     filter === 'all' ? scheduleData : scheduleData.filter((item) => item.track === filter);
 
   if (!filtered.length) {
-    scheduleBody.innerHTML = `<tr><td colspan="5">Jelenleg nincs meghirdetett alkalom ehhez a szűréshez. Írj nekünk, és egyeztetünk egyéni időpontot!</td></tr>`;
+    const row = document.createElement('tr');
+    const cell = document.createElement('td');
+    cell.colSpan = 5;
+    cell.textContent = 'Jelenleg nincs meghirdetett alkalom ehhez a szűréshez. Írj nekünk, és egyeztetünk egyéni időpontot!';
+    row.appendChild(cell);
+    scheduleBody.appendChild(row);
     return;
   }
 
   filtered.forEach((item) => {
     const row = document.createElement('tr');
-    row.innerHTML = `
-      <td>${item.day}</td>
-      <td>${item.time}</td>
-      <td><span class="${badgeClassMap[item.track]}">${item.group}</span></td>
-      <td>${item.level}</td>
-      <td>${item.format}</td>
-    `;
+    const values = [item.day, item.time, item.group, item.level, item.format];
+
+    values.forEach((value, index) => {
+      const cell = document.createElement('td');
+      if (index === 2) {
+        const badge = document.createElement('span');
+        badge.className = badgeClassMap[item.track] || 'schedule__badge';
+        badge.textContent = value;
+        cell.appendChild(badge);
+      } else {
+        cell.textContent = value;
+      }
+      row.appendChild(cell);
+    });
+
     scheduleBody.appendChild(row);
   });
 }
@@ -282,12 +295,12 @@ function renderSavedBookings(entries, source = 'server') {
 
     bookingSavedEmpty.textContent = emptyMessages[source] || emptyMessages.unavailable;
     bookingSavedEmpty.hidden = false;
-    bookingSavedList.innerHTML = '';
+    bookingSavedList.textContent = '';
     return;
   }
 
   bookingSavedEmpty.hidden = true;
-  bookingSavedList.innerHTML = '';
+  bookingSavedList.textContent = '';
 
   const orderedEntries = entries
     .slice()
@@ -334,47 +347,9 @@ function renderSavedBookings(entries, source = 'server') {
   });
 }
 
-async function fetchServerBookings(limit = 5) {
-  if (typeof fetch !== 'function') {
-    return null;
-  }
-
-  try {
-    const response = await fetch(`${BOOKING_API_ENDPOINT}?limit=${encodeURIComponent(limit)}`, {
-      headers: {
-        Accept: 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Szerver hiba: ${response.status}`);
-    }
-
-    const payload = await response.json();
-
-    if (!payload || !Array.isArray(payload.bookings)) {
-      return [];
-    }
-
-    return payload.bookings;
-  } catch (error) {
-    console.error('Nem sikerült lekérni a jelentkezéseket a szerverről:', error);
-    return null;
-  }
-}
-
-async function updateSavedBookings({ preferLocal = false } = {}) {
+async function updateSavedBookings() {
   if (!bookingSavedSection) {
     return;
-  }
-
-  if (!preferLocal) {
-    const serverBookings = await fetchServerBookings(5);
-
-    if (serverBookings !== null) {
-      renderSavedBookings(serverBookings, 'server');
-      return;
-    }
   }
 
   if (bookingStorage) {
